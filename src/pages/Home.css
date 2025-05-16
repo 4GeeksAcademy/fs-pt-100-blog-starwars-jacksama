@@ -1,0 +1,11 @@
+.scroll-container {
+    display: flex;
+    overflow: auto;
+    padding: 20px;
+    gap: 15px;
+    scrollbar-width: none;
+}
+
+.scroll-container ::-webkit-scrollbar {
+    display: none;
+}

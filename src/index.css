@@ -1,0 +1,14 @@
+
+body {
+background: rgb(255, 255, 255);
+}
+
+h2 {
+    text-align: left;
+    color: red;
+    padding: 50px;
+}
+
+.navbar {
+    padding: 30px;
+}
