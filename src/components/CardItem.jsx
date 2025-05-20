@@ -1,6 +1,7 @@
 import React from "react";
 import "./CardItem.css";
 import useGlobalReducer from "../hooks/useGlobalReducer";
+import { Link } from "react-router-dom";
 
 export const CardItem = ({ title, category, uid}) => {
     const { store, dispatch } = useGlobalReducer();
@@ -19,13 +20,14 @@ export const CardItem = ({ title, category, uid}) => {
     return (
         <div className="card">
             <div className="card-top">
-                <img className="card-image" src={imageUrl} alt={title} />
+                <img className="card-image" src={imageUrl} alt={title}
+                onError={(e) => (e.target.src = "https://fakeimg.pl/220x220?text=sin+imagen")}/>
             </div>
             <div className="card-body">
                 <h3 className="card-title">{title}</h3>
                 <p className="card-subtitle">{category}</p>
                 <div className="card-actions">
-                    <button className="card-btn">Ver más</button>
+                    <Link to={`/${category.toLowerCase()}/${uid}`} className="card-btn">Ver más</Link>
                     <button className="fav-btn" onClick={toggleFavorite}>{isFavorite ? "💛" : "🩶​"}</button>
                 </div>
             </div>

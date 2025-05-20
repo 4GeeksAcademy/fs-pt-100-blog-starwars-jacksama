@@ -22,14 +22,13 @@ export const initialStore=()=>{
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
-    case 'add_task':
-
-      const { id,  color } = action.payload
-
+    case 'add_task': {
+      const { id,  color } = action.payload;
       return {
         ...store,
-        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
+        todos: store.todos.map((todo) => todo.id === id ? { ...todo, background: color } : todo),
       };
+    }
 
       case 'set_caracters':
         return {...store, caracters:action.payload};
@@ -41,7 +40,7 @@ export default function storeReducer(store, action = {}) {
         return {...store, vehicles:action.payload};
 
       case 'toggle_favorite' : {
-        const item = acction.payload;
+        const item = action.payload;
         const exist = store.favorites.find(fav => fav.uid === item.uid && fav.category === item.category);
         return {...store, favorites: exist ? store.favorites.filter(fav => !(fav.uid === item.uid && fav.category === item.category )) : [...store.favorites, item]
         };
@@ -51,4 +50,7 @@ export default function storeReducer(store, action = {}) {
       throw Error('Unknown action.');
   }    
 }
+
+
+
 

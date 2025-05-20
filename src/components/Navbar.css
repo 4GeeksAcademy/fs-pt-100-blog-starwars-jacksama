@@ -1,0 +1,55 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    color: rgb(39, 39, 39);
+    padding: 10px 20px;
+}
+
+.nav-brand {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #ffc107;
+}
+
+.favorite-container {
+    position: relative;
+}
+
+.favorite-button {
+    background-color: #ffc107;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.favorite-dropdown {
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    background: white;
+    color: #000;
+    border: 1px solid #ccc;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgbs(0,0,0,0.2);
+    z-index: 100;
+    border-radius: 6px;
+}
+
+.favorite-item button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.empty-msg {
+    padding: 10px;
+    font-style: italic;
+}
+
