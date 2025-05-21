@@ -22,8 +22,8 @@ export const Navbar = () => {
 			<Link to="/" className="navbar-brand"> <img src="https://img.icons8.com/?size=100&id=38539&format=png&color=000000" alt="image"/></Link>
 
 			<div className="favorites-container">
-				<button onClick={toggleDropdown} className="favorites-button">
-					Favoritos 💛 ({store.favorites.length})
+				<button onClick={toggleDropdown} className="favorites-button btn btn-primary">
+					Favoritos ({store.favorites.length})
 				</button>
 
 				{Dropdown && (
@@ -33,7 +33,7 @@ export const Navbar = () => {
 						) : (store.favorites.map((item) => (
 							<div key={`${item.uid}-${item.category}`} className="favorites-item">
 								<span>{item.name}</span>
-								<button onClick={() => removeFavorite(item)}>❌</button>
+								<button onClick={() => removeFavorite(item)}>🗑️​</button>
 							</div>
 						))
 						)}
