@@ -24,7 +24,7 @@ export const Details = () => {
 
     if (!item) return <p className="text-center mt-5">Cargando...</p>;
 
-    const imageUrl = `https://github.com/tbone849/star-wars-guide/blob/master/build/assets/img/${category == "Personaje" ? "characters" : category == "Planeta" ? "planets" : "vehicles"}/${uid}.jpg?raw=true`;
+    const imageUrl = `https://github.com/tbone849/star-wars-guide/blob/master/build/assets/img/${category == "personaje" ? "characters" : category == "planeta" ? "planets" : "vehicles"}/${uid}.jpg?raw=true`;
     // No logro que carguen las imágenes de personajes y planetas en la vista Details, solo se muestran correctamente los vehículos.
 
 
